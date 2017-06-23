@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Asana Productivity Hacks",
+  "short_name": "Asana Productivity Hacks",
+  "description": "Removes the unread inbox indicators and makes private tasks more clear",
+  "version": "0.1",
+  "author": "Dennis Paagman",
+  "content_scripts": [
+    {
+      "matches": ["https://app.asana.com/*"],
+      "css": ["asana-hacks.css"],
+      "js": ["asana-hacks.js"]
+    }
+  ]
+}

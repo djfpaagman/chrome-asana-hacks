@@ -1,0 +1,25 @@
+/* Make task labels wider on big screens */
+.PotPillsContainer-potPillLink {
+  max-width: 80px;
+}
+
+@media screen and (min-width: 1600px) {
+  .PotPillsContainer-potPillLink {
+    max-width: 200px;
+  }
+}
+
+/* Hide unread notification blob */
+.has-newNotifications::after {
+  background: transparent !important;
+}
+
+/* Make private task bar more visible to spot unnecessary hidden tasks */
+.MessageBanner--default.TaskPrivacyBanner-isPrivate {
+  background-color: #DF0101;
+  color: #fff;
+}
+
+.MessageBanner--default.TaskPrivacyBanner-isPrivate a {
+  color: #fff;
+}
