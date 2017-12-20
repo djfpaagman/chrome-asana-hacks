@@ -15,12 +15,14 @@ a.PotPillsContainer-potPillLink {
 }
 
 /* Make private task bar more visible to spot unnecessary hidden tasks */
-.MessageBanner--default.TaskPrivacyBanner-isPrivate {
+.MessageBanner--default.TaskPrivacyBanner-isPrivate,
+.TaskMessageBanner.MessageBanner.TaskPrivacyBanner-isPrivate {
   background-color: #DF0101;
   color: #fff;
 }
 
-.MessageBanner--default.TaskPrivacyBanner-isPrivate a {
+.MessageBanner--default.TaskPrivacyBanner-isPrivate a,
+.TaskMessageBanner.MessageBanner.TaskPrivacyBanner-isPrivate a {
   color: #fff;
 }
 
