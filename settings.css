@@ -37,6 +37,7 @@ table.settings td.value {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 17px;
 }
 
 .slider:before {
@@ -49,6 +50,7 @@ table.settings td.value {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -63,13 +65,4 @@ input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
