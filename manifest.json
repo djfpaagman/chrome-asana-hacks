@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Asana Productivity Hacks",
   "short_name": "Asana Productivity Hacks",
-  "description": "Removes the unread inbox indicators and makes private tasks more clear",
-  "version": "0.1",
+  "description": "Several Asana hacks that make your life more productive!",
+  "version": "0.5",
   "author": "Dennis Paagman",
   "permissions": [
     "storage",
@@ -19,8 +19,8 @@
     }
   ],
   "browser_action": {
-    "name": "Click to hide Asana inbox",
-    "default_icon": "icon-off.png",
+    "name": "Asana hack settings",
+    "default_icon": "icon.png",
     "default_popup": "settings.html"
   }
 }
