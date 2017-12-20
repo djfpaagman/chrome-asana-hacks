@@ -5,11 +5,22 @@
   "description": "Removes the unread inbox indicators and makes private tasks more clear",
   "version": "0.1",
   "author": "Dennis Paagman",
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://app.asana.com/*"
+  ],
   "content_scripts": [
     {
       "matches": ["https://app.asana.com/*"],
       "css": ["asana-hacks.css"],
-      "js": ["asana-hacks.js"]
+      "js": ["asana-hacks.js"],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+  "browser_action": {
+    "name": "Click to hide Asana inbox",
+    "default_icon": "icon-off.png",
+    "default_popup": "settings.html"
+  }
 }

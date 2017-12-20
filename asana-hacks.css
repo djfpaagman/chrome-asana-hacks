@@ -1,10 +1,10 @@
 /* Make task labels wider on big screens */
-.PotPillsContainer-potPillLink {
+a.PotPillsContainer-potPillLink {
   max-width: 80px;
 }
 
 @media screen and (min-width: 1600px) {
-  .PotPillsContainer-potPillLink {
+  a.PotPillsContainer-potPillLink {
     max-width: 200px;
   }
 }
@@ -22,4 +22,89 @@
 
 .MessageBanner--default.TaskPrivacyBanner-isPrivate a {
   color: #fff;
+}
+
+/* Use full width for task list */
+.lunaui-grid-center-pane-container#center_pane_container {
+  max-width: none !important;
+}
+
+
+/* Make first custom field in overview wider */
+.GridHeaderWithCustomProperties .CustomPropertyHeader-fieldHeading--enum:first-child {
+  width: 90px;
+}
+
+.ItemRow .CustomPropertyEnumEditablePreviewCell:first-child {
+  width: 110px;
+}
+/* Move up the heart count */
+.miniHeartButtonView .miniHeartButtonView-heartNumber{
+  transform: translateY(-1px);
+}
+
+/* Change color of all the hearted counters */
+.HeartButton-button--isHearted~ .HeartButton-heartCount--withThumbsUp,
+.miniHeartButtonView.is-hearted,
+.MiniHeartButton.MiniHeartButton--hearted{
+  color: rgb(239, 46, 104);
+}
+
+/* Default heart icon */
+.miniHeartButtonView .miniHeartButtonView-icon,
+.MiniHeartButton .MiniHeartButton-icon{
+  fill: transparent;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 295.39'%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke='#b7bfc6' stroke-width='20px' stroke-miterlimit='10' d='M310,87.87c.32,48.16-17.74,78.17-40.57,105.46-29.39,35.12-65,63.44-102.74,89.21-3.6,2.46-6.53,4.37-11,1.17-49.16-34.78-97.27-70.9-127.83-124.44C7.4,123.5,2.48,85.89,23.91,48.28,47.62,6.69,107.45-2.51,143.16,29.52,159.7,44.37,159.78,44.46,176,30.6c26.77-22.86,57.48-26.24,88.1-12.4C297.34,33.24,309.44,63.24,310,87.87Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+
+/* Hover heart icon */
+.miniHeartButtonView:hover .miniHeartButtonView-icon,
+.MiniHeartButton:hover .MiniHeartButton-icon{
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 295.39'%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke='#32c1ff' stroke-width='20px' stroke-miterlimit='10' d='M310,87.87c.32,48.16-17.74,78.17-40.57,105.46-29.39,35.12-65,63.44-102.74,89.21-3.6,2.46-6.53,4.37-11,1.17-49.16-34.78-97.27-70.9-127.83-124.44C7.4,123.5,2.48,85.89,23.91,48.28,47.62,6.69,107.45-2.51,143.16,29.52,159.7,44.37,159.78,44.46,176,30.6c26.77-22.86,57.48-26.24,88.1-12.4C297.34,33.24,309.44,63.24,310,87.87Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Hearted icon */
+.miniHeartButtonView.is-hearted .miniHeartButtonView-icon,
+.MiniHeartButton.MiniHeartButton--hearted .MiniHeartButton-icon{
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 275.39'%3E%3Cg%3E%3Cg%3E%3Cpath fill='#ef2e68' d='M300,77.87c.32,48.16-17.74,78.17-40.57,105.46-29.39,35.12-65,63.44-102.74,89.21-3.6,2.46-6.53,4.37-11,1.17-49.16-34.78-97.27-70.9-127.83-124.44C-2.6,113.5-7.52,75.89,13.91,38.28,37.62-3.31,97.45-12.51,133.16,19.52,149.7,34.37,149.78,34.46,166,20.6c26.77-22.86,57.48-26.24,88.1-12.4C287.34,23.24,299.44,53.24,300,77.87Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Circular heart button */
+.SingleTaskPaneToolbar .HeartButton--withThumbsUp .ThumbsUpLineIcon{
+  fill: transparent;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 295.39'%3E%3Cg%3E%3Cg%3E%3Cpath fill='none' stroke='#b7bfc6' stroke-width='20px' stroke-miterlimit='10' d='M310,87.87c.32,48.16-17.74,78.17-40.57,105.46-29.39,35.12-65,63.44-102.74,89.21-3.6,2.46-6.53,4.37-11,1.17-49.16-34.78-97.27-70.9-127.83-124.44C7.4,123.5,2.48,85.89,23.91,48.28,47.62,6.69,107.45-2.51,143.16,29.52,159.7,44.37,159.78,44.46,176,30.6c26.77-22.86,57.48-26.24,88.1-12.4C297.34,33.24,309.44,63.24,310,87.87Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+
+/* Change background of circular hearted button */
+.HeartButton-button--withThumbsUp.CircularToggleButton--toggledOn .CircularButton{
+  background: rgb(239, 46, 104);
+  border-color: rgb(239, 46, 104);
+}
+
+/* Change icon of circular hearted button */
+.HeartButton-button--withThumbsUp.CircularToggleButton--toggledOn .ThumbsUpIcon{
+  fill: transparent;
+  transform: translateY(1px);
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 295.39'%3E%3Cg%3E%3Cg%3E%3Cpath fill='#FFFFFF' d='M310,87.87c.32,48.16-17.74,78.17-40.57,105.46-29.39,35.12-65,63.44-102.74,89.21-3.6,2.46-6.53,4.37-11,1.17-49.16-34.78-97.27-70.9-127.83-124.44C7.4,123.5,2.48,85.89,23.91,48.28,47.62,6.69,107.45-2.51,143.16,29.52,159.7,44.37,159.78,44.46,176,30.6c26.77-22.86,57.48-26.24,88.1-12.4C297.34,33.24,309.44,63.24,310,87.87Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+
+/* Change the border on :hover for the circular heart button */
+.HeartButton-button--withThumbsUp.CircularToggleButton--toggledOff .CircularButton--enabled:focus,
+.HeartButton-button--withThumbsUp.CircularToggleButton--toggledOff .CircularButton--enabled:hover{
+  box-shadow: 0 0 0 3px rgb(239, 46, 104);
+}
+
+/* Change background animation when hearting */
+.animationPane--liking{
+  background-image: -webkit-linear-gradient(bottom left, #ca1f52, #ef2e68);
+  background-image: linear-gradient(to top right, #ca1f52, #ef2e68);
 }
