@@ -10,7 +10,7 @@ a.PotPillsContainer-potPillLink {
 }
 
 /* Hide unread notification blob */
-.has-newNotifications::after {
+.has-newNotifications.asana-hacks-hide::after {
   background: transparent !important;
 }
 
