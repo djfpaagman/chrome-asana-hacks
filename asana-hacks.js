@@ -2,7 +2,7 @@
   function() {
     'use strict';
 
-    var originalTitle;
+    var originalTitle = document.title;
 
     function hideNotificationBlobInTitle() {
       if (document.title[0] === "●") {
