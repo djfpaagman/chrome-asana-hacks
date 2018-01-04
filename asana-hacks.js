@@ -4,25 +4,27 @@
 
     var originalTitle = document.title;
 
-    function hideNotificationBlobInTitle() {
+    function hideNotificationBlobs() {
       if (document.title[0] === "●") {
         originalTitle = document.title;
 
         document.title = document.title.substr(2, document.title.length);
+
+        // hide the blob next to the Inbox button
+        document.querySelector('.has-newNotifications').classList.add("asana-hacks-hide");
       }
     }
 
     // creates an observer to monitor changes in the <title>
     var titleObserver = new MutationObserver(
       function(mutations) {
-        hideNotificationBlobInTitle();
+        hideNotificationBlobs();
       }
     );
 
     function toggleInbox() {
       chrome.storage.sync.get({ inbox: true }, function(data) {
         if (data.inbox) {
-          // hide the Inbox button
          document.querySelector('.Topbar-notificationsButton').style.display = '';
         } else {
           // show the Inbox button
@@ -50,17 +52,14 @@
     function toggleSilentMode() {
       chrome.storage.sync.get({ silent_mode: false }, function(data) {
         if (data.silent_mode) {
-          // Observe changes in the <title> and hide the blob when it changes
+          // Observe changes in the <title> and hide the blobs when it changes
           titleObserver.observe(
             document.querySelector('title'),
             { attributes: true, childList: true, characterData: true }
           );
 
-          // Also remove it if already present
-          hideNotificationBlobInTitle();
-
-          // And hide the blob behind "Inbox"
-          document.querySelector('.has-newNotifications').classList.add("asana-hacks-hide");
+          // Also hide them if already present
+          hideNotificationBlobs();
         } else {
           // Stop observing changes to the <title>
           titleObserver.disconnect();
