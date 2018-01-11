@@ -47,6 +47,12 @@
           if (document.querySelector(".PageHeaderStructure-collapseButton")) {
             document.querySelector(".PageHeaderStructure-collapseButton").click();
           }
+
+          // Hide sidebar if not yet hidden
+          if (document.querySelector(".Topbar-navButton").classList.contains("is-active")) {
+            document.querySelector(".Topbar-navButton").click();
+          }
+
         } else {
           // show all tags and project labels
           document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
@@ -55,8 +61,12 @@
 
           // Uncollapse header if collapsed
           if (document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton")) {
-            // not yet collapsed, so collapse it
             document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton").click();
+          }
+
+          // Show hidebar if hidden
+          if (!document.querySelector(".Topbar-navButton").classList.contains("is-active")) {
+            document.querySelector(".Topbar-navButton").click();
           }
         }
       });
