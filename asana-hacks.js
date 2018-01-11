@@ -35,16 +35,29 @@
 
     function toggleMeetingMode() {
       chrome.storage.sync.get({ meeting_mode: false }, function(data) {
+        var headerToggle = document.querySelector(".PageHeaderStructure-collapseButton");
+
         if (data.meeting_mode) {
           // hide all tags and project labels
-         document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
-           el.style.display = 'none';
-         });
+          document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
+            el.style.display = 'none';
+          });
+
+          // Collapse header if not yet collapsed
+          if (document.querySelector(".PageHeaderStructure-collapseButton")) {
+            document.querySelector(".PageHeaderStructure-collapseButton").click();
+          }
         } else {
           // show all tags and project labels
-         document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
-           el.style.display = '';
-         });
+          document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
+            el.style.display = '';
+          });
+
+          // Uncollapse header if collapsed
+          if (document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton")) {
+            // not yet collapsed, so collapse it
+            document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton").click();
+          }
         }
       });
     }
