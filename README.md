@@ -16,6 +16,10 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.8 — 2018-05-31
+
+* Fix compatability with new Asana design
+
 ### 0.7
 * Meeting mode now also automatically toggles the header and toggles the sidebar.
 

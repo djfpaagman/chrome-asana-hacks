@@ -3,6 +3,11 @@
     'use strict';
 
     var originalTitle = document.title;
+    var unreadBlob = document.querySelector('.SidebarTopNavLinks-notificationsButton--hasNewNotifications');
+    var inboxButton = document.querySelector('.SidebarTopNavLinks-notificationsButton');
+    var allTagsAndLabels = document.querySelectorAll('.PotPillsContainer');
+    var sidebar = document.querySelector(".sidebar-mountNode");
+    var sidebarButton = document.querySelector(".ExpandSidebarButton");
 
     function hideNotificationBlobs() {
       if (document.title[0] === "●") {
@@ -11,7 +16,7 @@
         document.title = document.title.substr(2, document.title.length);
 
         // hide the blob next to the Inbox button
-        document.querySelector('.has-newNotifications').classList.add("asana-hacks-hide");
+        unreadBlob.classList.add("asana-hacks-hide");
       }
     }
 
@@ -25,48 +30,36 @@
     function toggleInbox() {
       chrome.storage.sync.get({ inbox: true }, function(data) {
         if (data.inbox) {
-         document.querySelector('.Topbar-notificationsButton').style.display = '';
+         inboxButton.style.display = '';
         } else {
           // show the Inbox button
-         document.querySelector('.Topbar-notificationsButton').style.display = 'none';
+         inboxButton.style.display = 'none';
         }
       });
     }
 
     function toggleMeetingMode() {
       chrome.storage.sync.get({ meeting_mode: false }, function(data) {
-        var headerToggle = document.querySelector(".PageHeaderStructure-collapseButton");
-
         if (data.meeting_mode) {
           // hide all tags and project labels
-          document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
+          allTagsAndLabels.forEach(function(el) {
             el.style.display = 'none';
           });
 
-          // Collapse header if not yet collapsed
-          if (document.querySelector(".PageHeaderStructure-collapseButton")) {
-            document.querySelector(".PageHeaderStructure-collapseButton").click();
-          }
-
           // Hide sidebar if not yet hidden
-          if (document.querySelector(".Topbar-navButton").classList.contains("is-active")) {
-            document.querySelector(".Topbar-navButton").click();
+          if (!sidebar.classList.contains("is-collapsed")) {
+            sidebarButton.click();
           }
 
         } else {
           // show all tags and project labels
-          document.querySelectorAll('.PotPillsContainer').forEach(function(el) {
+          allTagsAndLabels.forEach(function(el) {
             el.style.display = '';
           });
 
-          // Uncollapse header if collapsed
-          if (document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton")) {
-            document.querySelector(".PageHeaderCollapsedStructure-uncollapseButton").click();
-          }
-
           // Show hidebar if hidden
-          if (!document.querySelector(".Topbar-navButton").classList.contains("is-active")) {
-            document.querySelector(".Topbar-navButton").click();
+          if (sidebar.classList.contains("is-collapsed")) {
+            sidebarButton.click();
           }
         }
       });
@@ -91,7 +84,7 @@
           document.title = originalTitle;
 
           // Show blob behind "inbox"
-          document.querySelector('.has-newNotifications').classList.remove("asana-hacks-hide");
+          unreadBlob.classList.remove("asana-hacks-hide");
         }
       });
     }
