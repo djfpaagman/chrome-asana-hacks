@@ -16,6 +16,9 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.9 — 2018-09-04
+* Fixes full width task list for larger screens by updating CSS selector and attribute.
+
 ### 0.8 — 2018-05-31
 
 * Fix compatability with new Asana design

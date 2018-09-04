@@ -3,7 +3,7 @@
   "name": "Asana Productivity Hacks",
   "short_name": "Asana Productivity Hacks",
   "description": "Several Asana hacks that make your life more productive!",
-  "version": "0.8",
+  "version": "0.9",
   "author": "Dennis Paagman",
   "permissions": [
     "storage",
