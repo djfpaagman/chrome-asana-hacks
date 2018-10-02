@@ -9,16 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   )
 
-  document.getElementById('inbox-value').addEventListener('change', function() {
-    chrome.storage.sync.set({ inbox: this.checked });
-
-    chrome.tabs.query({ url: 'https://app.asana.com/*' }, function(tabs) {
-      tabs.forEach(function(tab) {
-        chrome.tabs.sendMessage(tab.id, { toggle: "inbox" });
-      });
-    });
-  });
-
   document.getElementById('meeting-mode-value').addEventListener('change', function() {
     chrome.storage.sync.set({ meeting_mode: this.checked });
 
@@ -38,4 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  document.getElementById('home-value').addEventListener('change', function() {
+    chrome.storage.sync.set({ home: this.checked });
+
+    chrome.tabs.query({ url: 'https://app.asana.com/*' }, function(tabs) {
+      tabs.forEach(function(tab) {
+        chrome.tabs.sendMessage(tab.id, { toggle: "home" });
+      });
+    });
+  });
+
+  document.getElementById('inbox-value').addEventListener('change', function() {
+    chrome.storage.sync.set({ inbox: this.checked });
+
+    chrome.tabs.query({ url: 'https://app.asana.com/*' }, function(tabs) {
+      tabs.forEach(function(tab) {
+        chrome.tabs.sendMessage(tab.id, { toggle: "inbox" });
+      });
+    });
+  });
+
 });

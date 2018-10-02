@@ -3,8 +3,9 @@
 This small extension is here to increase your Asana productivity, it:
 
 * Introduces "Silent mode", which removes the unread inbox notifications
-* Introduces an "Inbox" switch, which completely hides your inbox so you can focus on work
 * Introduces "meeting mode", which reduces visual clutter when using Asana in meetings
+* Introduces an "Inbox" switch, which completely hides your inbox so you can focus on work
+* Introduces a "Home" switch, which hides the new Home feature in the menu bar.
 
 Next to that, the extension:
 
@@ -16,12 +17,18 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.11
+* Fixes non-release of version 0.10 by actually updating the version in the manifest.
+* Adds a new feature to hide the "Home" menu item.
+
+### 0.10 — 2018-09-14
+* Fixes bug where in some cases the unread inbox blob would return while "silent mode" is enabled.
+
 ### 0.9 — 2018-09-04
 * Fixes full width task list for larger screens by updating CSS selector and attribute.
 
 ### 0.8 — 2018-05-31
-
-* Fix compatability with new Asana design
+* Fixes compatability with new Asana design
 
 ### 0.7
 * Meeting mode now also automatically toggles the header and toggles the sidebar.

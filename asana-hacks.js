@@ -3,11 +3,11 @@
     'use strict';
 
     var originalTitle = document.title;
-    var unreadBlob = document.querySelector('.SidebarTopNavLinks-notificationsButton--hasNewNotifications');
-    var inboxButton = document.querySelector('.SidebarTopNavLinks-notificationsButton');
-    var allTagsAndLabels = document.querySelectorAll('.PotPillsContainer');
+    var inboxButton = document.querySelector(".SidebarTopNavLinks-notificationsButton");
+    var allTagsAndLabels = document.querySelectorAll(".PotPillsContainer");
     var sidebar = document.querySelector(".sidebar-mountNode");
     var sidebarButton = document.querySelector(".ExpandSidebarButton");
+    var homeButton = document.querySelector(".SidebarTopNavLinks-homeButton");
 
     function hideNotificationBlobs() {
       if (document.title[0] === "●") {
@@ -16,7 +16,7 @@
         document.title = document.title.substr(2, document.title.length);
 
         // hide the blob next to the Inbox button
-        unreadBlob.classList.add("asana-hacks-hide");
+        inboxButton.classList.add("asana-hacks-hide");
       }
     }
 
@@ -84,7 +84,18 @@
           document.title = originalTitle;
 
           // Show blob behind "inbox"
-          unreadBlob.classList.remove("asana-hacks-hide");
+          inboxButton.classList.remove("asana-hacks-hide");
+        }
+      });
+    }
+
+    function toggleHome() {
+      chrome.storage.sync.get({ home: true }, function(data) {
+        if (data.home) {
+         homeButton.style.display = '';
+        } else {
+          // show the Inbox button
+         homeButton.style.display = 'none';
         }
       });
     }
@@ -102,6 +113,9 @@
           case "silent-mode":
             toggleSilentMode();
             break;
+          case "home":
+            toggleHome();
+            break;
         }
       }
     );
@@ -113,6 +127,7 @@
       toggleInbox();
       toggleMeetingMode();
       toggleSilentMode();
+      toggleHome();
     }, 1000);
   }
 )();
