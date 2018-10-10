@@ -17,7 +17,10 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
-### 0.11
+### 0.12 — 2018-10-10
+* Makes extension more stable with new approach to customizing CSS via classes on the HTML `body`. This fixes timing issues and makes the modes more stable when navigating different projects.
+
+### 0.11 — 2018-10-02
 * Fixes non-release of version 0.10 by actually updating the version in the manifest.
 * Adds a new feature to hide the "Home" menu item.
 

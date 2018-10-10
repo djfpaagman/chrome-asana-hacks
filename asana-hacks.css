@@ -9,11 +9,6 @@ a.PotPillsContainer-potPillLink {
   }
 }
 
-/* Hide unread notification blob */
-.SidebarTopNavLinks-notificationsButton.asana-hacks-hide::after {
-  background: transparent !important;
-}
-
 /* Make private task bar more visible to spot unnecessary hidden tasks */
 .MessageBanner--default.TaskPrivacyBanner-isPrivate,
 .TaskMessageBanner.MessageBanner.TaskPrivacyBanner-isPrivate {
@@ -38,4 +33,29 @@ a.PotPillsContainer-potPillLink {
 
 .ItemRow .CustomPropertyEnumEditablePreviewCell:first-child {
   width: 110px;
+}
+
+/* Make the dropdown for custom fields longer */
+.ButtonSelect-dropdownMenu {
+  max-height: 500px !important;
+}
+
+/* Hide unread notification blob */
+body.asana-hacks--hide .SidebarTopNavLinks-notificationsButton::after {
+  background: transparent !important;
+}
+
+/* Hide in meeting mode */
+body.asana-hacks--meeting-mode .PotPillsContainer {
+  display: none !important;
+}
+
+/* Hide in no inbox mode */
+body.asana-hacks--hide-inbox .SidebarTopNavLinks-notificationsButton {
+  display: none !important;
+}
+
+/* Hide in no Home mode */
+body.asana-hacks--hide-home .SidebarTopNavLinks-homeButton {
+  display: none !important;
 }
