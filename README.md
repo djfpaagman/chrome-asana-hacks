@@ -15,7 +15,15 @@ Next to that, the extension:
 ## Installation
 Get the extension [through the Chrome web store][1] or clone the repository and [load it as an unpacked extension][2].
 
+## Development
+1. `yarn install`
+2. `yarn watch` while developing, load the `dist/` folder in Chrome.
+3. `yarn build` when releasing.
+
 ## Changelog
+
+### 0.13 (unreleased)
+* Converts the code to Typescript as an experiment, minor changes to the code and functionality.
 
 ### 0.12 — 2018-10-10
 * Makes extension more stable with new approach to customizing CSS via classes on the HTML `body`. This fixes timing issues and makes the modes more stable when navigating different projects.

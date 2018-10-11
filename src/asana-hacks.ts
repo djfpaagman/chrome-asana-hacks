@@ -4,7 +4,7 @@
 
     var originalTitle = document.title;
     var sidebar = document.querySelector(".sidebar-mountNode");
-    var sidebarButton = document.querySelector(".ExpandSidebarButton");
+    var sidebarButton = document.querySelector(".ExpandSidebarButton") as HTMLElement;
     var body = document.querySelector("body");
 
     function hideNotificationBlobs() {
@@ -113,14 +113,9 @@
       }
     );
 
-    // Wait a second before toggling everything, because stuff is not guaranteed to
-    // have been loaded yet. "run_at": "document_idle" is not always late enough,
-    // probably because stuff is still loaded asynchroniously.
-    setTimeout(function() {
-      toggleInbox();
-      toggleMeetingMode();
-      toggleSilentMode();
-      toggleHome();
-    }, 1000);
+    toggleInbox();
+    toggleMeetingMode();
+    toggleSilentMode();
+    toggleHome();
   }
 )();

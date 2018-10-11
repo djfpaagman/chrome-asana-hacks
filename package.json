@@ -1,0 +1,20 @@
+{
+  "name": "chrome-asana-hacks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --config webpack/webpack.dev.js --watch",
+    "build": "webpack --config webpack/webpack.prod.js"
+  },
+  "repository": "git@github.com:djfpaagman/chrome-asana-hacks.git",
+  "author": "Dennis Paagman <dennispaagman@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.74",
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  }
+}
