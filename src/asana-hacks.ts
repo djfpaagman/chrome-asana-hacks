@@ -93,6 +93,16 @@
       });
     }
 
+    function toggleBusiness() {
+      chrome.storage.sync.get({ business: false }, function (data) {
+        if (data.business) {
+          body.classList.add("asana-hacks--hide-business");
+        } else {
+          body.classList.remove("asana-hacks--hide-business");
+        }
+      });
+    }
+
     // Listen for messages to toggle features, sent by the settings panel
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
@@ -109,6 +119,9 @@
           case "home":
             toggleHome();
             break;
+          case "business":
+            toggleBusiness();
+            break;
         }
       }
     );
@@ -117,5 +130,6 @@
     toggleMeetingMode();
     toggleSilentMode();
     toggleHome();
+    toggleBusiness();
   }
 )();
