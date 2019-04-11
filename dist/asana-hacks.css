@@ -23,16 +23,7 @@ a.PotPillsContainer-potPillLink {
 
 /* Use full width for task list */
 .PotListPage-gridPane {
-  flex: 1 1 auto !important;
-}
-
-/* Make first custom field in overview wider */
-.GridHeaderWithCustomProperties .CustomPropertyHeader-fieldHeading--enum:first-child {
-  width: 90px;
-}
-
-.ItemRow .CustomPropertyEnumEditablePreviewCell:first-child {
-  width: 110px;
+  flex: 1 1 1000px !important;
 }
 
 /* Make the dropdown for custom fields longer */
