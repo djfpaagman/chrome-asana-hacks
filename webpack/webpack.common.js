@@ -6,7 +6,7 @@ module.exports = {
         settings: path.join(__dirname, '../src/settings.ts'),
         "asana-hacks": path.join(__dirname, '../src/asana-hacks.ts'),
     },
-    output:{ 
+    output: {
         path: path.join(__dirname, '../dist'),
         filename: '[name].js'
     },

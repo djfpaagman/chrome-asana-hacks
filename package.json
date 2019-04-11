@@ -1,6 +1,6 @@
 {
   "name": "chrome-asana-hacks",
-  "version": "1.0.0",
+  "version": "0.12",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
