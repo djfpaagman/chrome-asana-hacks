@@ -51,7 +51,9 @@ body.asana-hacks--hide-home .SidebarTopNavLinks-homeButton {
   display: none !important;
 }
 
+/* Hide business upsells */
 body.asana-hacks--hide-business .SidebarTopNavLinks-myPortfoliosbutton,
-body.asana-hacks--hide-business .TopbarContingentUpgradeLink {
+body.asana-hacks--hide-business .TopbarContingentUpgradeLink,
+body.asana-hacks--hide-business .SidebarInvite {
   display: none !important;
 }
