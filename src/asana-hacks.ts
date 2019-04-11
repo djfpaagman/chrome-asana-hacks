@@ -99,8 +99,16 @@
           body.classList.remove("asana-hacks--hide-business");
         } else {
           body.classList.add("asana-hacks--hide-business");
+        }
+      });
+    }
+
+    function toggleLike() {
+      chrome.storage.sync.get({ like: true }, function (data) {
+        if (data.like) {
+          body.classList.remove("asana-hacks--hide-like");
         } else {
-          body.classList.remove("asana-hacks--hide-business");
+          body.classList.add("asana-hacks--hide-like");
         }
       });
     }
@@ -124,6 +132,9 @@
           case "business":
             toggleBusiness();
             break;
+          case "like":
+            toggleLike();
+            break;
         }
       }
     );
@@ -133,5 +144,6 @@
     toggleSilentMode();
     toggleHome();
     toggleBusiness();
+    toggleLike();
   }
 )();

@@ -57,3 +57,10 @@ body.asana-hacks--hide-business .TopbarContingentUpgradeLink,
 body.asana-hacks--hide-business .SidebarInvite {
   display: none !important;
 }
+
+/* Hide likes and like buttons */
+body.asana-hacks--hide-like .miniHeartButtonView,
+body.asana-hacks--hide-like .MiniHeartButton,
+body.asana-hacks--hide-like .HeartButton {
+  display: none !important;
+}
