@@ -64,3 +64,10 @@ body.asana-hacks--hide-like .MiniHeartButton,
 body.asana-hacks--hide-like .HeartButton {
   display: none !important;
 }
+
+/* Hide default reports */
+.SidebarReportsItemRow:nth-of-type(2),
+.SidebarReportsItemRow:nth-of-type(3),
+.SidebarReportsItemRow:nth-of-type(4) {
+  display: none !important;
+}
