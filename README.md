@@ -22,8 +22,10 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
-### 0.13 (unreleased)
+### 0.13 — 2019-04-11
 * Converts the code to Typescript as an experiment, minor changes to the code and functionality.
+* Introduces a new setting to hide features/upsells belonging to the 'Business' plan
+* Introduces a new setting to hide likes/like buttons.
 
 ### 0.12 — 2018-10-10
 * Makes extension more stable with new approach to customizing CSS via classes on the HTML `body`. This fixes timing issues and makes the modes more stable when navigating different projects.

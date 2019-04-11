@@ -1,5 +1,3 @@
-
-
-zip -r chrome-asana-hacks.zip chrome-asana-hacks -x \*.git\*
-
-https://chrome.google.com/webstore/developer/edit/aednamkkbmbonmnmohjfhgmekggbnjlh?authuser=1
+* yard build
+* zip -r chrome-asana-hacks.zip dist
+* Upload at https://chrome.google.com/webstore/developer/edit/aednamkkbmbonmnmohjfhgmekggbnjlh?authuser=1
