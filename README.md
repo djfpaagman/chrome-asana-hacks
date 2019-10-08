@@ -22,6 +22,10 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+
+### 0.13.2 — 2019-10-08
+* Fix vulnerability in lodash by upgrading dependencies. No user facing changes.
+
 ### 0.13 — 2019-04-11
 * Converts the code to Typescript as an experiment, minor changes to the code and functionality.
 * Introduces a new setting to hide features/upsells belonging to the 'Business' plan
