@@ -32,8 +32,8 @@ a.PotPillsContainer-potPillLink {
 }
 
 /* Hide unread notification blob */
-body.asana-hacks--hide .SidebarTopNavLinks-notificationsButton::after {
-  background: transparent !important;
+body.asana-hacks--hide .NotificationsIndicator {
+  display: none;
 }
 
 /* Hide in meeting mode */
