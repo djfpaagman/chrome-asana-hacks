@@ -22,6 +22,8 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.14 — 2019-11-25
+* Fixes hiding of unread inbox notifications blob in the sidebar.
 
 ### 0.13.2 — 2019-10-08
 * Fix vulnerability in lodash by upgrading dependencies. No user facing changes.
