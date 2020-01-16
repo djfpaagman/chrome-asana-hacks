@@ -22,6 +22,9 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.15 – 2020-01-16
+* UI improved: makes sure all elements in the 'private task' banner are white.
+
 ### 0.14 — 2019-11-25
 * Fixes hiding of unread inbox notifications blob in the sidebar.
 
