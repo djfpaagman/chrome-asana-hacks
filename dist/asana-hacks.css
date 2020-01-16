@@ -19,6 +19,11 @@ a.PotPillsContainer-potPillLink {
 .MessageBanner--default.TaskPrivacyBanner-isPrivate a,
 .TaskMessageBanner.MessageBanner.TaskPrivacyBanner-isPrivate a {
   color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+.TaskMessageBanner.MessageBanner.TaskPrivacyBanner-isPrivate .TaskPrivacyBanner-lockIcon {
+  fill: #fff;
 }
 
 /* Use full width for task list */
