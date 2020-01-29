@@ -22,6 +22,9 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.16 — 2020-01-29
+* Hides the ['Mark as Approval' feature][4] when upsells are hidden. This feature is for Business/Enterprise accounts only.
+
 ### 0.15 – 2020-01-16
 * UI improved: makes sure all elements in the 'private task' banner are white.
 
@@ -70,3 +73,4 @@ This code is distributed under the [MIT license][3].
 [1]: https://chrome.google.com/webstore/detail/aednamkkbmbonmnmohjfhgmekggbnjlh
 [2]: https://developer.chrome.com/extensions/getstarted#load
 [3]: LICENSE
+[4]: https://asana.com/guide/help/premium/approvals
