@@ -22,6 +22,9 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.17 — 2020-06-05
+* Updates the CSS class for hiding the Upgrade button in the top bar.
+
 ### 0.16 — 2020-01-29
 * Hides the ['Mark as Approval' feature][4] when upsells are hidden. This feature is for Business/Enterprise accounts only.
 
