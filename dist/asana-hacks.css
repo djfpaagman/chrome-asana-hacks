@@ -79,3 +79,8 @@ body.asana-hacks--hide-like .HeartButton {
 .SidebarReportsItemRow:nth-of-type(4) {
   display: none !important;
 }
+
+/* Hide New! banners */
+.FeatureStageIndicator-newText {
+  display: none !important;
+}
