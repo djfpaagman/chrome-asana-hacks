@@ -61,7 +61,8 @@ body.asana-hacks--hide-business .SidebarTopNavLinks-myPortfoliosbutton,
 body.asana-hacks--hide-business .BusinessUpgradeButton,
 body.asana-hacks--hide-business .SidebarInvite,
 body.asana-hacks--hide-business .SingleTaskPaneExtraActionsButton-toggleApprovalItem,
-body.asana-hacks--hide-business .MultiSelectToolbarExtrasMenu-toggleApprovalItem {
+body.asana-hacks--hide-business .MultiSelectToolbarExtrasMenu-toggleApprovalItem,
+body.asana-hacks--hide-business .SidebarTopNavLinks-goalsButton {
   display: none !important;
 }
 
