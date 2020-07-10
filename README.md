@@ -22,6 +22,10 @@ Get the extension [through the Chrome web store][1] or clone the repository and 
 
 ## Changelog
 
+### 0.18 — 2020-07-10
+* Hides the 'Goals' feature when upsells are hidden.
+* Hides "New!" banner in the header.
+
 ### 0.17 — 2020-06-05
 * Updates the CSS class for hiding the Upgrade button in the top bar.
 
